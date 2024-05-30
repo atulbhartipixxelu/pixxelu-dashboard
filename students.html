@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<!--=== Coding by CodingLab | www.codinglabweb.com === -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dark-mode.css">
+    <link rel="stylesheet" href="css/mobile.css"/>
+
+    <!----===== Iconscout CSS ===== -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+    <title>Admin Dashboard Panel</title>
+</head>
+
+<body>
+    <nav>
+        <div class="logo-name">
+            <div class="logo-image">
+                <img src="images/logo.png" alt="">
+                <img src="images/favicon.svg" alt="favicon" />
+            </div>
+        </div>
+
+        <div class="menu-items">
+            <ul class="nav-links">
+                <li><a href="index.html">
+                        <img src="images/dashboard.svg" alt="dashboard" />
+                        <span class="link-name">Dashboard</span>
+                    </a></li>
+                <li><a href="students.html">
+                        <img src="images/student.svg" alt="student" />
+                        <span class="link-name">All Students</span>
+                    </a></li>
+                <li><a href="#">
+                        <img src="images/attendance.svg" alt="attendance" />
+                        <span class="link-name">Attendance</span>
+                    </a></li>
+                <li><a href="staff.html">
+                        <img src="images/staff.svg" alt="staff" />
+                        <span class="link-name">Staff</span>
+                    </a></li>
+                <li><a href="#">
+                        <img src="images/leads.svg" alt="leads" />
+                        <span class="link-name">Leads</span>
+                    </a></li>
+            </ul>
+
+            <ul class="logout-mode">
+                <li><a href="#">
+                        <i class="uil uil-signout"></i>
+                        <span class="link-name">Help</span>
+                    </a></li>
+                <li><a href="#">
+                        <i class="uil uil-signout"></i>
+                        <span class="link-name">Settings</span>
+                    </a></li>
+                <li><a href="login.html">
+                        <i class="uil uil-signout"></i>
+                        <span class="link-name">Logout</span>
+                    </a></li>
+
+                <li class="mode">
+                    <a href="#">
+                        <i class="uil uil-moon"></i>
+                        <span class="link-name">Dark Mode</span>
+                    </a>
+
+                    <div class="mode-toggle">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="dashboard">
+        <div class="top">
+            <i class="uil uil-bars sidebar-toggle"></i>
+
+            <!-- <div class="search-box">
+                <i class="uil uil-search"></i>
+                <input type="text" placeholder="Search here...">
+            </div> -->
+
+
+
+
+            <div class="dropdown-admin-panel">
+
+                <div class="notifications-bar">
+                    <div class="notifications-img">
+                        <img src="images/notification.svg" alt="notification" />
+                        <span class="dynmic-gtt">1</span>
+                    </div>
+                    <div class="dyanmic-content">
+                        <h4>Notifications</h4>
+                    </div>
+                </div>
+
+                <div class="img-admin-panel">
+                    <img src="images/profile.jpg" alt="">
+                </div>
+                <div class="dropdown-content-panel">
+                    <div class="dropdown">
+                        <button class="dropbtn">Pixxelu<br>Admin</button>
+                        <div class="dropdown-content">
+                            <a href="#">Profile</a>
+                            <a href="#">Settings</a>
+                            <a href="#">Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="space-remove">
+        </div>
+
+        <div class="title-subheading">
+            <h2>All Students</h2>
+        </div>
+
+        <div class="main-table">
+
+            <div class="data-table-listing">
+                <div class="dropdown-column">
+                    <div class="dropdown-date">
+                        <input type="date" value="2023-10-21" />
+                    </div>
+                    <div class="dropdown-Filter">
+                        <input type="Filter" value="Filter">
+                    </div>
+                </div>
+                <div class="dropdown-Search">
+                    <div class="search-container">
+                        <input type="text" class="search-input" placeholder="Search">
+                        <button type="submit" class="search-icon">
+                            <img src="images/search.svg" alt="search">
+                        </button>
+                    </div>
+                </div>
+                <div class="btn-pixxelu">
+                    <a href="#"><i class="fa-solid fa-plus"></i>Add New Student</a>
+                </div>
+            </div>
+            <div class="scrolling-data-table">
+                <table class="rwd-table">
+                    <tbody>
+                        <tr class="data-table">
+                            <th></th>
+                            <th>S. No</th>
+                            <th>Student ID</th>
+                            <th>Image</th>
+                            <th>Name</th>
+                            <th>Phone No</th>
+                            <th>Email</th>
+                            <th>Aadhar No</th>
+                            <th>Course</th>
+                            <th>Joining Date</th>
+                            <th>Total Fees</th>
+                            <th>Course Duration</th>
+                            <th>Last paid Fees</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                        <tr>
+                            <div id="myModal" class="modal">
+                                <!-- Modal content -->
+                                <div class="modal-content">
+                                    <span class="close">&times;</span>
+                                    <div class="student-card">
+                                        <img src="images/d1.png" alt="Student Image">
+                                        <div class="student-info">
+                                            <div><span>Student ID:</span> 001</div>
+                                            <div><span>Name:</span> John Doe</div>
+
+                                            <div><span>Phone No:</span> +1234567890</div>
+                                            <div><span>Email:</span> john.doe@example.com</div>
+
+                                            <div><span>Aadhar No:</span> 1234-5678-9012</div>
+                                            <div><span>Course:</span> Computer Science</div>
+
+                                            <div><span>Joining Date:</span> 2021-08-15</div>
+                                            <div><span>Total Fees:</span> $2000</div>
+
+                                            <div><span>Course Duration:</span> 4 Years</div>
+                                            <div><span>Last paid Fees:</span> $500</div>
+
+                                            <div><span>Status:</span> Active</div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <td data-th="">
+                                <input type="checkbox">
+                            </td>
+                            <td data-th="S. No">
+                                1
+                            </td>
+                            <td data-th="Student ID" id="openModalBtn">
+                                0001
+                            </td>
+                            <td data-th="Image">
+                                <img src="images/d1.png">
+                            </td>
+                            <td data-th="Name">
+                                Princess Petal
+                            </td>
+                            <td data-th="Phone No">
+                                7894561230
+                            </td>
+                            <td data-th="Email">
+                                dummy@gmail.com
+                            </td>
+                            <td data-th="Aadhar No">
+                                4444 5520 1245
+                            </td>
+                            <td data-th="Aadhar No">
+                                Web Design
+                            </td>
+                            <td data-th="Aadhar No">
+                                10 May 2024
+                            </td>
+                            <td data-th="Aadhar No">
+                                ₹ 60,000
+                            </td>
+                            <td data-th="Aadhar No">
+                                06 Months
+                            </td>
+                            <td data-th="Aadhar No">
+                                5000<br>10 May 2024
+                            </td>
+                            <td data-th="Aadhar No" class="green-color">
+                                <span>Already Paid</span>
+                            </td>
+                            <td data-th="Aadhar No">
+                                <img src="images/ellips.svg" alt="ellips" />
+                            </td>
+                        </tr>
+
+
+
+                        <tr>
+                            <td data-th="">
+                                <input type="checkbox">
+                            </td>
+                            <td data-th="S. No">
+                                2
+                            </td>
+                            <td data-th="Student ID">
+                                0001
+                            </td>
+                            <td data-th="Image">
+                                <img src="images/d1.png">
+                            </td>
+                            <td data-th="Name">
+                                Princess Petal
+                            </td>
+                            <td data-th="Phone No">
+                                7894561230
+                            </td>
+                            <td data-th="Email">
+                                dummy@gmail.com
+                            </td>
+                            <td data-th="Aadhar No">
+                                4444 5520 1245
+                            </td>
+                            <td data-th="Aadhar No">
+                                Web Design
+                            </td>
+                            <td data-th="Aadhar No">
+                                10 May 2024
+                            </td>
+                            <td data-th="Aadhar No">
+                                ₹ 60,000
+                            </td>
+                            <td data-th="Aadhar No">
+                                06 Months
+                            </td>
+                            <td data-th="Aadhar No">
+                                5000<br>10 May 2024
+                            </td>
+                            <td data-th="Aadhar No" class="green-color">
+                                <span>Already Paid</span>
+                            </td>
+                            <td data-th="Aadhar No">
+                                <img src="images/ellips.svg" alt="ellips" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td data-th="">
+                                <input type="checkbox">
+                            </td>
+                            <td data-th="S. No">
+                                3
+                            </td>
+                            <td data-th="Student ID">
+                                0001
+                            </td>
+                            <td data-th="Image">
+                                <img src="images/d1.png">
+                            </td>
+                            <td data-th="Name">
+                                Princess Petal
+                            </td>
+                            <td data-th="Phone No">
+                                7894561230
+                            </td>
+                            <td data-th="Email">
+                                dummy@gmail.com
+                            </td>
+                            <td data-th="Aadhar No">
+                                4444 5520 1245
+                            </td>
+                            <td data-th="Aadhar No">
+                                Web Design
+                            </td>
+                            <td data-th="Aadhar No">
+                                10 May 2024
+                            </td>
+                            <td data-th="Aadhar No">
+                                ₹ 60,000
+                            </td>
+                            <td data-th="Aadhar No">
+                                06 Months
+                            </td>
+                            <td data-th="Aadhar No">
+                                5000<br>10 May 2024
+                            </td>
+                            <td data-th="Aadhar No" class="red-color">
+                                <span>Pending</span>
+                            </td>
+                            <td data-th="Aadhar No">
+                                <img src="images/ellips.svg" alt="ellips" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td data-th="">
+                                <input type="checkbox">
+                            </td>
+                            <td data-th="S. No">
+                                4
+                            </td>
+                            <td data-th="Student ID">
+                                0001
+                            </td>
+                            <td data-th="Image">
+                                <img src="images/d1.png">
+                            </td>
+                            <td data-th="Name">
+                                Princess Petal
+                            </td>
+                            <td data-th="Phone No">
+                                7894561230
+                            </td>
+                            <td data-th="Email">
+                                dummy@gmail.com
+                            </td>
+                            <td data-th="Aadhar No">
+                                4444 5520 1245
+                            </td>
+                            <td data-th="Aadhar No">
+                                Web Design
+                            </td>
+                            <td data-th="Aadhar No">
+                                10 May 2024
+                            </td>
+                            <td data-th="Aadhar No">
+                                ₹ 60,000
+                            </td>
+                            <td data-th="Aadhar No">
+                                06 Months
+                            </td>
+                            <td data-th="Aadhar No">
+                                5000<br>10 May 2024
+                            </td>
+                            <td data-th="Aadhar No" class="green-color">
+                                <span>Already Paid</span>
+                            </td>
+                            <td data-th="Aadhar No">
+                                <img src="images/ellips.svg" alt="ellips" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td data-th="">
+                                <input type="checkbox">
+                            </td>
+                            <td data-th="S. No">
+                                5
+                            </td>
+                            <td data-th="Student ID">
+                                0001
+                            </td>
+                            <td data-th="Image">
+                                <img src="images/d1.png">
+                            </td>
+                            <td data-th="Name">
+                                Princess Petal
+                            </td>
+                            <td data-th="Phone No">
+                                7894561230
+                            </td>
+                            <td data-th="Email">
+                                dummy@gmail.com
+                            </td>
+                            <td data-th="Aadhar No">
+                                4444 5520 1245
+                            </td>
+                            <td data-th="Aadhar No">
+                                Web Design
+                            </td>
+                            <td data-th="Aadhar No">
+                                10 May 2024
+                            </td>
+                            <td data-th="Aadhar No">
+                                ₹ 60,000
+                            </td>
+                            <td data-th="Aadhar No">
+                                06 Months
+                            </td>
+                            <td data-th="Aadhar No">
+                                5000<br>10 May 2024
+                            </td>
+                            <td data-th="Aadhar No" class="red-color">
+                                <span>Pending</span>
+                            </td>
+                            <td data-th="Aadhar No">
+                                <img src="images/ellips.svg" alt="ellips" />
+                            </td>
+                        </tr>
+
+
+
+                        <tr>
+                            <td data-th="">
+                                <input type="checkbox">
+                            </td>
+                            <td data-th="S. No">
+                                6
+                            </td>
+                            <td data-th="Student ID">
+                                0001
+                            </td>
+                            <td data-th="Image">
+                                <img src="images/d1.png">
+                            </td>
+                            <td data-th="Name">
+                                Princess Petal
+                            </td>
+                            <td data-th="Phone No">
+                                7894561230
+                            </td>
+                            <td data-th="Email">
+                                dummy@gmail.com
+                            </td>
+                            <td data-th="Aadhar No">
+                                4444 5520 1245
+                            </td>
+                            <td data-th="Aadhar No">
+                                Web Design
+                            </td>
+                            <td data-th="Aadhar No">
+                                10 May 2024
+                            </td>
+                            <td data-th="Aadhar No">
+                                ₹ 60,000
+                            </td>
+                            <td data-th="Aadhar No">
+                                06 Months
+                            </td>
+                            <td data-th="Aadhar No">
+                                5000<br>10 May 2024
+                            </td>
+                            <td data-th="Aadhar No" class="green-color">
+                                <span>Already Paid</span>
+                            </td>
+                            <td data-th="Aadhar No">
+                                <img src="images/ellips.svg" alt="ellips" />
+                            </td>
+                        </tr>
+
+
+
+                        <tr>
+                            <td data-th="">
+                                <input type="checkbox">
+                            </td>
+                            <td data-th="S. No">
+                                7
+                            </td>
+                            <td data-th="Student ID">
+                                0001
+                            </td>
+                            <td data-th="Image">
+                                <img src="images/d1.png">
+                            </td>
+                            <td data-th="Name">
+                                Princess Petal
+                            </td>
+                            <td data-th="Phone No">
+                                7894561230
+                            </td>
+                            <td data-th="Email">
+                                dummy@gmail.com
+                            </td>
+                            <td data-th="Aadhar No">
+                                4444 5520 1245
+                            </td>
+                            <td data-th="Aadhar No">
+                                Web Design
+                            </td>
+                            <td data-th="Aadhar No">
+                                10 May 2024
+                            </td>
+                            <td data-th="Aadhar No">
+                                ₹ 60,000
+                            </td>
+                            <td data-th="Aadhar No">
+                                06 Months
+                            </td>
+                            <td data-th="Aadhar No">
+                                5000<br>10 May 2024
+                            </td>
+                            <td data-th="Already Paid" class="red-color">
+                                <span>Pending</span>
+                            </td>
+                            <td data-th="Aadhar No">
+                                <img src="images/ellips.svg" alt="ellips" />
+                            </td>
+                        </tr>
+
+
+
+                        <tr>
+                            <td data-th="">
+                                <input type="checkbox">
+                            </td>
+                            <td data-th="S. No">
+                                8
+                            </td>
+                            <td data-th="Student ID">
+                                0001
+                            </td>
+                            <td data-th="Image">
+                                <img src="images/d1.png">
+                            </td>
+                            <td data-th="Name">
+                                Princess Petal
+                            </td>
+                            <td data-th="Phone No">
+                                7894561230
+                            </td>
+                            <td data-th="Email">
+                                dummy@gmail.com
+                            </td>
+                            <td data-th="Aadhar No">
+                                4444 5520 1245
+                            </td>
+                            <td data-th="Aadhar No">
+                                Web Design
+                            </td>
+                            <td data-th="Aadhar No">
+                                10 May 2024
+                            </td>
+                            <td data-th="Aadhar No">
+                                ₹ 60,000
+                            </td>
+                            <td data-th="Aadhar No">
+                                06 Months
+                            </td>
+                            <td data-th="Aadhar No">
+                                5000<br>10 May 2024
+                            </td>
+                            <td data-th="Aadhar No" class="green-color">
+                                <span>Already Paid</span>
+                            </td>
+                            <td data-th="Aadhar No">
+                                <img src="images/ellips.svg" alt="ellips" />
+                            </td>
+                        </tr>
+
+
+
+                        <tr>
+                            <td data-th="">
+                                <input type="checkbox">
+                            </td>
+                            <td data-th="S. No">
+                                9
+                            </td>
+                            <td data-th="Student ID">
+                                0001
+                            </td>
+                            <td data-th="Image">
+                                <img src="images/d1.png">
+                            </td>
+                            <td data-th="Name">
+                                Princess Petal
+                            </td>
+                            <td data-th="Phone No">
+                                7894561230
+                            </td>
+                            <td data-th="Email">
+                                dummy@gmail.com
+                            </td>
+                            <td data-th="Aadhar No">
+                                4444 5520 1245
+                            </td>
+                            <td data-th="Aadhar No">
+                                Web Design
+                            </td>
+                            <td data-th="Aadhar No">
+                                10 May 2024
+                            </td>
+                            <td data-th="Aadhar No">
+                                ₹ 60,000
+                            </td>
+                            <td data-th="Aadhar No">
+                                06 Months
+                            </td>
+                            <td data-th="Aadhar No">
+                                5000<br>10 May 2024
+                            </td>
+                            <td data-th="Pending" class="red-color">
+                                <span>Pending</span>
+                            </td>
+                            <td data-th="Aadhar No">
+                                <img src="images/ellips.svg" alt="ellips" />
+                            </td>
+                        </tr>
+
+
+
+                        <tr>
+                            <td data-th="">
+                                <input type="checkbox">
+                            </td>
+                            <td data-th="S. No">
+                                10
+                            </td>
+                            <td data-th="Student ID">
+                                0001
+                            </td>
+                            <td data-th="Image">
+                                <img src="images/d1.png">
+                            </td>
+                            <td data-th="Name">
+                                Princess Petal
+                            </td>
+                            <td data-th="Phone No">
+                                7894561230
+                            </td>
+                            <td data-th="Email">
+                                dummy@gmail.com
+                            </td>
+                            <td data-th="Aadhar No">
+                                4444 5520 1245
+                            </td>
+                            <td data-th="Aadhar No">
+                                Web Design
+                            </td>
+                            <td data-th="Aadhar No">
+                                10 May 2024
+                            </td>
+                            <td data-th="Aadhar No">
+                                ₹ 60,000
+                            </td>
+                            <td data-th="Aadhar No">
+                                06 Months
+                            </td>
+                            <td data-th="Aadhar No">
+                                5000<br>10 May 2024
+                            </td>
+                            <td data-th="Aadhar No" class="green-color">
+                                <span>Already Paid</span>
+                            </td>
+                            <td data-th="Aadhar No">
+                                <img src="images/ellips.svg" alt="ellips" />
+                            </td>
+                        </tr>
+
+
+
+
+                        <tr>
+                            <td data-th="">
+                                <input type="checkbox">
+                            </td>
+                            <td data-th="S. No">
+                                11
+                            </td>
+                            <td data-th="Student ID">
+                                0001
+                            </td>
+                            <td data-th="Image">
+                                <img src="images/d1.png">
+                            </td>
+                            <td data-th="Name">
+                                Princess Petal
+                            </td>
+                            <td data-th="Phone No">
+                                7894561230
+                            </td>
+                            <td data-th="Email">
+                                dummy@gmail.com
+                            </td>
+                            <td data-th="Aadhar No">
+                                4444 5520 1245
+                            </td>
+                            <td data-th="Aadhar No">
+                                Web Design
+                            </td>
+                            <td data-th="Aadhar No">
+                                10 May 2024
+                            </td>
+                            <td data-th="Aadhar No">
+                                ₹ 60,000
+                            </td>
+                            <td data-th="Aadhar No">
+                                06 Months
+                            </td>
+                            <td data-th="Aadhar No">
+                                5000<br>10 May 2024
+                            </td>
+                            <td data-th="Aadhar No" class="green-color">
+                                <span>Already Paid</span>
+                            </td>
+                            <td data-th="Aadhar No">
+                                <img src="images/ellips.svg" alt="ellips" />
+                            </td>
+                        </tr>
+
+
+
+                        <tr id="openModalBtn">
+
+                            <div id="myModal" class="modal">
+                                <!-- Modal content -->
+                                <div class="modal-content">
+                                    <span class="close">&times;</span>
+                                    <p>This is a modal popup!</p>
+                                </div>
+                            </div>
+
+
+                            <td data-th="">
+                                <input type="checkbox">
+                            </td>
+                            <td data-th="S. No">
+                                12
+                            </td>
+                            <td data-th="Student ID">
+                                0001
+                            </td>
+                            <td data-th="Image">
+                                <img src="images/d1.png">
+                            </td>
+                            <td data-th="Name">
+                                Princess Petal
+                            </td>
+                            <td data-th="Phone No">
+                                7894561230
+                            </td>
+                            <td data-th="Email">
+                                dummy@gmail.com
+                            </td>
+                            <td data-th="Aadhar No">
+                                4444 5520 1245
+                            </td>
+                            <td data-th="Aadhar No">
+                                Web Design
+                            </td>
+                            <td data-th="Aadhar No">
+                                10 May 2024
+                            </td>
+                            <td data-th="Aadhar No">
+                                ₹ 60,000
+                            </td>
+                            <td data-th="Aadhar No">
+                                06 Months
+                            </td>
+                            <td data-th="Aadhar No">
+                                5000<br>10 May 2024
+                            </td>
+                            <td data-th="Pending" class="red-color">
+                                <span>Pending</span>
+                            </td>
+
+
+                            <td class="action">
+                                <div class="drop-action">
+                                    <div class="dropdown keep-open">
+                                        <button id="dLabel" role="button" href="#" data-toggle="dropdown"
+                                            data-target="#" class="btn btn-primary">
+                                            <img src="images/ellips.svg" alt="ellips" /> <span class="caret"></span>
+                                        </button>
+                                        <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                                            <li><a href="#"><span class="icon-set clone"><i
+                                                            class="fa-regular fa-clone"></i></span>Clone</a></li>
+                                            <li><a href="#"><span class="icon-set clone"><i
+                                                            class="fa-regular fa-pen-to-square"></i></span>Edit</a>
+                                            </li>
+                                            <li><a href="#"><span class="icon-set clone"><i
+                                                            class="fa-solid fa-box-archive"></i></span>Archive</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        </div>
+
+
+
+        <div class="footer-code">
+            <div class="copyright-code">
+                <span>© 2014-2024 Pixxelu. All rights reserved</span>
+            </div>
+
+    </section>
+
+    <script src="js/script.js"></script>
+    <script src="js/custom.js"></script>
+
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const dropdownButton = document.getElementById('dLabel');
+            const dropdownMenu = document.querySelector('.dropdown-menu');
+
+            dropdownButton.addEventListener('click', function (event) {
+                event.stopPropagation();
+                dropdownMenu.classList.toggle('show');
+            });
+
+            document.addEventListener('click', function (event) {
+                if (!dropdownButton.contains(event.target) && !dropdownMenu.contains(event.target)) {
+                    dropdownMenu.classList.remove('show');
+                }
+            });
+
+            dropdownMenu.addEventListener('click', function (event) {
+                event.stopPropagation();
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>

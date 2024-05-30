@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<!--=== Coding by CodingLab | www.codinglabweb.com === -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dark-mode.css">
+    <link rel="stylesheet" href="css/mobile.css"/>
+
+    <!----===== Iconscout CSS ===== -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+
+
+    <title>Admin Dashboard Panel</title>
+</head>
+
+<body>
+    <nav>
+        <div class="logo-name">
+            <div class="logo-image">
+                <img src="images/logo.png" alt="">
+                <img src="images/favicon.svg" alt="favicon" />
+            </div>
+        </div>
+
+        <div class="menu-items">
+            <ul class="nav-links">
+                <li><a href="index.html">
+                        <img src="images/dashboard.svg" alt="dashboard" />
+                        <span class="link-name">Dashboard</span>
+                    </a></li>
+                <li><a href="students.html">
+                        <img src="images/student.svg" alt="student" />
+                        <span class="link-name">All Students</span>
+                    </a></li>
+                <li><a href="#">
+                        <img src="images/attendance.svg" alt="attendance" />
+                        <span class="link-name">Attendance</span>
+                    </a></li>
+                <li><a href="staff.html">
+                        <img src="images/staff.svg" alt="staff" />
+                        <span class="link-name">Staff</span>
+                    </a></li>
+                <li><a href="#">
+                        <img src="images/leads.svg" alt="leads" />
+                        <span class="link-name">Leads</span>
+                    </a></li>
+            </ul>
+
+            <ul class="logout-mode">
+                <li><a href="#">
+                        <i class="uil uil-signout"></i>
+                        <span class="link-name">Help</span>
+                    </a></li>
+                <li><a href="#">
+                        <i class="uil uil-signout"></i>
+                        <span class="link-name">Settings</span>
+                    </a></li>
+                <li><a href="login.html">
+                        <i class="uil uil-signout"></i>
+                        <span class="link-name">Logout</span>
+                    </a></li>
+
+                <li class="mode">
+                    <a href="#">
+                        <i class="uil uil-moon"></i>
+                        <span class="link-name">Dark Mode</span>
+                    </a>
+
+                    <div class="mode-toggle">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="dashboard">
+        <div class="top">
+            <i class="uil uil-bars sidebar-toggle"></i>
+
+            <!-- <div class="search-box">
+                <i class="uil uil-search"></i>
+                <input type="text" placeholder="Search here...">
+            </div> -->
+
+
+
+
+            <div class="dropdown-admin-panel">
+
+                <div class="notifications-bar">
+                    <div class="notifications-img">
+                        <img src="images/notification.svg" alt="notification" />
+                        <span class="dynmic-gtt">1</span>
+                    </div>
+                    <div class="dyanmic-content">
+                        <h4>Notifications</h4>
+                    </div>
+                </div>
+
+                <div class="img-admin-panel">
+                    <img src="images/profile.jpg" alt="">
+                </div>
+                <div class="dropdown-content-panel">
+                    <div class="dropdown">
+                        <button class="dropbtn">Pixxelu<br>Admin</button>
+                        <div class="dropdown-content">
+                            <a href="#">Profile</a>
+                            <a href="#">Settings</a>
+                            <a href="#">Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="space-remove">
+        </div>
+
+        <div class="title-subheading">
+            <h2>Staff</h2>
+        </div>
+
+        <div class="main-table">
+
+            <h2>Add New Student</h2>
+
+            <div class="login-form">
+                <div class="small-12 medium-2 large-2 columns">
+                    <div class="circle">
+                        <img class="profile-pic" src="images/i2.svg" alt="ai">
+
+                    </div>
+                    <div class="p-image">
+                        <img src="images/i1.svg" class="upload-button">
+                        <input class="file-upload" type="file" accept="image/*" />
+                    </div>
+                </div>
+
+
+                <form>
+                    <div class="form-group">
+                        <div class="form-design first-name">
+                            <label for="first-name">First Name</label>
+                            <input type="text" id="first-name" name="first-name" placeholder="Enter name">
+                        </div>
+                        <div class="form-design last-name">
+                            <label for="last-name">Last Name</label>
+                            <input type="text" id="last-name" name="last-name" placeholder="Enter name">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-design dob">
+                            <label for="dob">Date of Birth</label>
+                            <input type="date" id="dob" name="dob">
+                        </div>
+                        <div class="form-design adhar-no">
+                            <label for="aadhar">Aadhar Number</label>
+                            <input type="number" id="aadhar" name="aadhar" placeholder="Enter aadhar number">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-design ph-no">
+                            <label for="phone">Phone Number</label>
+                            <input type="text" id="phone" name="phone" placeholder="Enter phone number">
+                        </div>
+                        <div class="form-design mail">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="Enter email address">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-design course">
+                            <label for="course">Course</label>
+                            <select id="course" name="course">
+                                <option value="">Select course</option>
+                                <!-- Add course options here -->
+                            </select>
+                        </div>
+                        <div class="form-design duration">
+                            <label for="duration">Course Duration</label>
+                            <select id="duration" name="duration">
+                                <option value="">Select Duration</option>
+                                <!-- Add duration options here -->
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-design join-date">
+                            <label for="joining-date">Joining Date</label>
+                            <input type="date" id="joining-date" name="joining-date">
+                        </div>
+                        <div class="form-design fees">
+                            <label for="total-fees">Total Fees</label>
+                            <input type="number" id="total-fees" name="total-fees" placeholder="Enter amount">
+                        </div>
+                    </div>
+
+
+                    <div class="main-payment">
+                        <div class="payment-head">
+                            <h3>Monthly Fees</h3>
+                        </div>
+                        <div class="form-group">
+                            <div class="amount">
+                                <label for="fees-amount">Fees Amount</label>
+                                <input type="number" id="fees-amount" name="fees-amount" placeholder="Enter amount">
+                            </div>
+                            <div class="payment-date">
+                                <label for="payment-date">Fees payment date</label>
+                                <input type="date" id="payment-date" name="payment-date">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+                <div class="form-button">
+                    <div class="back-button">
+                        <a href="#">Back</a>
+                    </div>
+                    <div class="save-button">
+                        <a href="#">Save</a>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </div>
+        </div>
+
+
+
+        <div class="footer-code">
+            <div class="copyright-code">
+                <span>© 2014-2024 Pixxelu. All rights reserved</span>
+            </div>
+
+    </section>
+
+    <script src="js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="js/custom.js"></script>
+
+</body>
+
+</html>
